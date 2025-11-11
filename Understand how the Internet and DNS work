@@ -1,0 +1,166 @@
+What Happens When You Type google.com in Your Browser
+
+Let’s break it into a real-world, step-by-step sequence.
+
+🧠 Step 1: Browser Checks Cache (DNS Lookup Starts)
+
+Before your browser can open google.com, it needs to know its IP address, because the Internet works on IPs — not names.
+
+So your browser first checks:
+
+Browser Cache — has the IP been recently resolved?
+
+Operating System Cache — your computer’s internal DNS memory.
+
+Router Cache — your home router may have cached DNS results.
+
+ISP’s DNS Resolver — your Internet Service Provider’s DNS server.
+
+If none of them know the IP, the DNS resolution process begins.
+
+🌐 Step 2: DNS (Domain Name System) — “The Internet’s Phonebook”
+
+DNS translates domain names (like google.com) into IP addresses (like 142.250.190.78).
+
+Let’s see how this happens 👇
+
+🧭 Step 3: DNS Resolution Process (Deep Dive)
+
+When your system needs the IP for google.com, it queries step-by-step:
+
+Root DNS Server
+
+First, the resolver contacts one of the 13 root DNS servers.
+
+The root server doesn’t know “google.com” but tells where to find .com domains.
+
+TLD (Top-Level Domain) DNS Server
+
+Next, it asks the .com TLD server.
+
+This server replies: “Ask Google’s authoritative name server.”
+
+Authoritative DNS Server
+
+Finally, your resolver asks Google’s own DNS server.
+
+It replies with the actual IP address for google.com.
+
+Then the resolver returns this IP to your browser, which caches it for future use.
+
+⚡ Step 4: Browser Connects to Google’s Server
+
+Now that your browser has the IP address (say 142.250.190.78), it does the following:
+
+TCP Handshake (if HTTP)
+
+Browser and server establish a connection (SYN → SYN-ACK → ACK).
+
+TLS Handshake (if HTTPS)
+
+The browser and server exchange encryption keys.
+
+Secure communication is established (using SSL/TLS).
+
+HTTP Request
+
+Your browser sends a request:
+
+GET / HTTP/1.1
+Host: google.com
+
+
+Server Response
+
+The server sends back HTML, CSS, JavaScript, and images.
+
+Your browser renders the page you see as “Google.”
+
+⚙️ Step 5: Rendering the Web Page
+
+Your browser’s rendering engine (like Blink in Chrome or Gecko in Firefox) takes the data from the server and:
+
+Builds the DOM (Document Object Model).
+
+Loads styles (CSS) and scripts (JavaScript).
+
+Displays the final web page visually.
+
+How Search Engines Work (e.g., Google Search)
+
+Now that you’re on Google, what happens when you search something, say, “cybersecurity”?
+
+Let’s go step-by-step again 👇
+
+🧠 Step 1: Crawling (Data Collection)
+
+Search engines use automated programs called Web Crawlers or Spiders (like Googlebot).
+
+These bots:
+
+Visit billions of web pages.
+
+Follow links on each page.
+
+Download and store page content.
+
+Discover new pages continuously.
+
+Example:
+
+Googlebot crawls “example.com”, finds a link to “example.com/about”, and visits that too.
+
+🗂️ Step 2: Indexing (Organizing Data)
+
+The crawled content is analyzed and stored in a massive index (like a digital library).
+
+For each page, Google stores:
+
+Keywords and phrases
+
+Page title, URL, and structure
+
+Images and alt text
+
+Freshness (when last updated)
+
+PageRank (how trustworthy/popular it is)
+
+This index is constantly updated.
+
+⚙️ Step 3: Ranking (Determining Order of Results)
+
+When you search something, Google doesn’t search the web live —
+it searches its index and ranks results based on hundreds of factors (algorithms).
+
+Some major ranking factors:
+
+Relevance — how well the page matches your search query.
+
+Authority — backlinks and domain trust.
+
+User Experience — loading speed, mobile-friendliness.
+
+Freshness — how recent the page is.
+
+Location & Personalization — results tailored to your area or history.
+
+🚀 Step 4: Displaying Search Results (SERP)
+
+The Search Engine Results Page (SERP) shows:
+
+Organic results (from ranking algorithm)
+
+Paid results/ads
+
+Snippets, videos, maps, etc.
+
+🔁 Step 5: Continuous Optimization
+
+Search engines constantly refine their algorithms using:
+
+Machine learning
+
+User feedback (clicks, dwell time)
+
+AI models like Google’s RankBrain
