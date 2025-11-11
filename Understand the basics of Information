@@ -1,0 +1,117 @@
+The CIA Triad
+
+The CIA Triad is the heart of information security. Let’s break down each part:
+
+a. Confidentiality
+
+Ensures that only authorized users can access the data.
+
+Protects data from being viewed by unauthorized people.
+
+Example:
+When you log in to your bank account, your password ensures only you can see your balance — that’s confidentiality.
+
+How it’s achieved:
+
+Passwords, biometrics, and encryption.
+
+Access control lists (ACLs) and data classification.
+
+Scenario:
+Imagine an employee leaves a laptop with customer data in a coffee shop. If it’s encrypted, even if someone steals it, they can’t read it — confidentiality is preserved.
+
+b. Integrity
+
+Ensures that data is accurate and not tampered with.
+
+No one should modify or delete data without authorization.
+
+Example:
+If someone tries to change your online banking balance from ₹1,000 to ₹10,000, the system should detect and prevent it.
+
+How it’s achieved:
+
+Hashing (MD5, SHA-256)
+
+Digital signatures
+
+Backups and version control
+
+Scenario:
+A hacker modifies a medical report to change test results. The hospital uses digital signatures — the mismatch reveals tampering. ✅ Integrity protected.
+
+c. Availability
+
+Ensures that data and services are accessible whenever needed.
+
+Protects systems from downtime or denial of access.
+
+Example:
+When you visit Amazon during a sale, the website must remain up and running — that’s availability.
+
+How it’s achieved:
+
+Redundant systems, backups, load balancing
+
+DDoS protection and maintenance monitoring
+
+Scenario:
+A Denial-of-Service (DoS) attack floods a company’s server with traffic, taking it down. Strong firewalls and content delivery networks (CDNs) maintain availability.
+
+| Term              | Meaning                                                             | Example / Scenario                                    |
+| ----------------- | ------------------------------------------------------------------- | ----------------------------------------------------- |
+| **Threat**        | A potential danger that can exploit a weakness.                     | Hackers trying to steal data from a bank.             |
+| **Vulnerability** | A weakness in a system that can be exploited.                       | Using an outdated operating system or weak passwords. |
+| **Weakness**      | A design or configuration issue that might lead to a vulnerability. | Not updating antivirus regularly.                     |
+| **Exploit**       | Actual code or method that takes advantage of a vulnerability.      | A hacker uses a “zero-day exploit” to bypass login.   |
+| **Payload**       | The malicious part of an attack that causes harm.                   | A ransomware’s payload encrypts all your files.       |
+
+Scenario Example:
+
+Threat: Hacker plans to attack a hospital network.
+
+Vulnerability: The hospital uses outdated software.
+
+Exploit: Hacker uses a known exploit to break in.
+
+Payload: Installs ransomware and encrypts files.
+
+CVE (Common Vulnerabilities and Exposures)
+
+Definition:
+CVE is a public list of known cybersecurity vulnerabilities maintained by the MITRE Corporation.
+Each vulnerability is given a unique CVE ID (like CVE-2024-12345).
+
+Purpose:
+It helps security experts share information about known vulnerabilities so organizations can fix them.
+
+Example:
+
+CVE-2021-44228 — Log4j vulnerability, which affected millions of servers worldwide.
+
+Scenario:
+A company scans its systems for CVE-listed issues and patches them to prevent attacks. This is called vulnerability management.
+
+CWE (Common Weakness Enumeration)
+
+Definition:
+CWE is a catalog of software weaknesses — the root causes of vulnerabilities.
+
+While CVE lists specific instances of vulnerabilities, CWE focuses on categories of weaknesses that lead to vulnerabilities.
+
+Example:
+
+CWE-79: Cross-Site Scripting (XSS)
+
+CWE-89: SQL Injection
+
+Scenario:
+A developer writes unsafe code like:
+
+SELECT * FROM users WHERE username = ' " + userInput + " ';
+
+
+This can lead to SQL Injection (CWE-89).
+Understanding CWEs helps developers write secure code.
+
+
